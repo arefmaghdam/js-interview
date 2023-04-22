@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("/serviceWorker.js")
+          .then(function (registration) {
+            console.log("Service worker registered:", registration);
+          })
+          .catch(function (error) {
+            console.log("Service worker registration failed:", error);
+          });
+      }
+    </script>
+  </head>
+  <body>
+    <img
+      src="https://www.google.com/logos/doodles/2023/earth-day-2023-6753651837109582.4-law.gif"
+    />
+  </body>
+</html>
