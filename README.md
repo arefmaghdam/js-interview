@@ -20,3 +20,8 @@ Person.create(); // Same as the above statement
 
 `Bind` creates a method which is uses the object as its context permanently
 
+## 004
+![](./assets/json.jpg)
+
+Encode: `JSON.stringify(obj);`
+Decode: `JSON.parse(string);`
