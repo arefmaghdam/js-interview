@@ -110,3 +110,16 @@ function process(item) {
     // Solution 2
     arr.map(process);
 ```
+
+### Isolate JS codes
+```js
+{
+  let name = "A";
+  console.log(name);
+}
+
+{
+  let name = "B";
+  console.log(name);
+}
+```
