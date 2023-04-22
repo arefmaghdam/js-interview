@@ -25,3 +25,88 @@ Person.create(); // Same as the above statement
 
 Encode: `JSON.stringify(obj);`
 Decode: `JSON.parse(string);`
+
+## 010
+### Function
+
+#### Use cases:
+1. Define and call a function
+2. Define and use in map function
+
+#### Named Function
+```js
+function process(item) {
+    ...
+}
+```
+
+##### Examples
+```js 
+    // Define
+    function process(item) {
+        ...
+    }
+
+    // Call
+    process(obj);
+
+    // Use in map
+    arr.map(process);
+```
+   
+**Define and use in map function**
+
+#### Arrow Function (lambda)
+```js
+(item) => {
+    ...
+}
+```
+##### Examples
+
+```js 
+    // Define
+    const process = (item) => {
+        ...
+    }
+
+    // Call
+    process(obj);
+
+    // Use in map
+    // Solution 1
+    arr.map((item) => {
+
+    });
+
+    // Solution 2
+    arr.map(process);
+```
+
+#### Anonymous Function
+```js
+(name) {
+    ...
+}
+```
+
+##### Examples
+
+```js 
+    // Define
+    const process = function(item) {
+        ...
+    }
+
+    // Call
+    process(obj);
+
+    // Use in map
+    // Solution 1
+    arr.map(function(item) {
+
+    });
+
+    // Solution 2
+    arr.map(process);
+```
