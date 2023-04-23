@@ -137,3 +137,6 @@ function process(item) {
 
 ## Polling vs Pushing
 ![](./assets/polling-pushing.jpg)
+
+## Event Flow
+![](./assets/event-flow.jpg)
