@@ -134,3 +134,6 @@ function process(item) {
 
 ![](./assets/web-worker-3.jpg)
 [hongkiat.com](https://www.hongkiat.com/blog/web-workers-javascript-api/)
+
+## Polling vs Pushing
+![](./assets/polling-pushing.jpg)
