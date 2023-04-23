@@ -123,3 +123,14 @@ function process(item) {
   console.log(name);
 }
 ```
+
+## Web Workers
+
+![](./assets/web-worker-1.png)
+[experoinc.com](https://www.experoinc.com/expero-resources/getting-started-with-web-workers-via-webpack)
+
+![](./assets/web-worker-2.png)
+[velotio.com](https://www.velotio.com/engineering-blog/create-faster-ui-in-react-apps-with-web-workers)
+
+![](./assets/web-worker-3.jpg)
+[hongkiat.com](https://www.hongkiat.com/blog/web-workers-javascript-api/)

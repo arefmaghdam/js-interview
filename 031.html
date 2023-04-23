@@ -10,6 +10,7 @@
         navigator.serviceWorker
           .register("/serviceWorker.js")
           .then(function (registration) {
+            debugger;
             console.log("Service worker registered:", registration);
           })
           .catch(function (error) {
