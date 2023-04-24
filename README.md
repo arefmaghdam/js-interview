@@ -140,3 +140,9 @@ function process(item) {
 
 ## Event Flow
 ![](./assets/event-flow.jpg)
+
+## Domain - Host - Port - IP
+
+![](./assets/domain-host-port.png)
+
+![](./assets/host-port.png)
