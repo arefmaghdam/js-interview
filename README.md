@@ -146,3 +146,53 @@ function process(item) {
 ![](./assets/domain-host-port.png)
 
 ![](./assets/host-port.png)
+
+## JSON - XML - Protobuf representation
+JSON
+```json
+{
+  "id": 1,
+  "name": "aref",
+  "books": ["book1", "book2", 1, 2.0, true],
+  "university": { "id": 111, "name": "Tehran" }
+}
+```
+
+XML
+```xml
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+  <id>1</id>
+  <name>aref</name>
+  <books>book1</books>
+  <books>book2</books>
+  <books>1</books>
+  <books>2</books>
+  <books>true</books>
+  <university>
+    <id>111</id>
+    <name>Tehran</name>
+  </university>
+</root>
+```
+
+Protobuf
+Definition:
+```cs
+message AutoGenerate {
+	uint32 id = 1;
+	string name = 2;
+	repeated string books = 3;
+	message University {
+		uint32 id = 1;
+		string name = 2;
+	}
+	University university = 4;
+}
+```
+
+Data: 
+```cs
+\x08\x01\x12\x04\x04\x00\x12\x00\x1A\x0B\n\x04name\x12\x04\x61\x72\x65\x66\n\x15\n\x05books\x12\x0E\n\x03\x62\x6F\x6F\x6B\x31\x12\x03\x62\x6F\x6F\x6B\x32\x12\x01\x31\x12\x03\x32\x2E\x30\x12\x01\x74\n+\n\tuniversity\x12\x1A\n\x02id\x12\x03\x31\x31\x31\x12\x04\n\x04name\x12\x06\x54\x65\x68\x72\x61\x6E
+```
+
