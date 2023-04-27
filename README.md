@@ -3,14 +3,18 @@
 ## 001
 ### Static Methods vs Normal Methods (ts)
 #### Normal method
+```js
 const obj1 = new Person("Alex")
 const obj2 = new Person("Jorien")
 obj1.print(); // Alex
 obj2.print(); // Jorien
+```
 
 #### Static method:
+```js
 Person.create(); // Creates an object of type Person
 Person.create(); // Same as the above statement
+```
 
 ## 003
 ### Call
@@ -199,3 +203,5 @@ Data:
 ## Memory
 ![](./assets/pointer-ram.png)
 
+## Async - Sync
+~[](./assets/aysnc-sync.png)
