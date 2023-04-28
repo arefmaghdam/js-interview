@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Rest
+      function customAlert(...messages) {
+        messages.forEach((msg) => {
+          alert(msg);
+        });
+      }
+
+      // customAlert("Hello, This is test", "Hello, This is second message");
+
+      // Array Spreading
+      let arr1 = [1, 2, 3];
+      let arr2 = ["a", "b", "c"];
+      let arrFinal = ["Start", ...arr1, "Test", ...arr2];
+      console.log("Array Spreading", arrFinal); // Output: ['Start', 1, 2, 3, 'Test', 'a', 'b', 'c']
+
+      // Object Spreading
+      const obj1 = {
+        id: 1,
+        name: "Taha",
+      };
+      const obj2 = {
+        id: 2,
+        city: "Tehran",
+      };
+      const objFinal = { ...obj1, age: 7, name: "Zahra", ...obj2 };
+      console.log("Object Spreading", objFinal);
+
+      //   Array Destructuring
+      let arr = [25.4, "JavaScript", "Tehran"];
+      const [temperature, prograamingLanguage, city] = arr;
+      console.log(
+        "Array Destructuring",
+        temperature,
+        prograamingLanguage,
+        city
+      );
+
+      // Object Destructuring
+      let obj = {
+        id: 1,
+        name: "taha",
+        state: true,
+      };
+
+      const { state, id } = obj;
+      console.log("Object Destructuring", id, state);
+    </script>
+  </body>
+</html>

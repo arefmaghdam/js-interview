@@ -223,3 +223,7 @@ String.prototype.customFunc = function() {
 
 > TODO: Learn more about `proto` and `prototype`
 
+## Spreading - Rest
+![](./assets/spreading-rest.jpg)
+
+[Rest/Spreading/Destructuring Demo](./rest-spreading.html)
