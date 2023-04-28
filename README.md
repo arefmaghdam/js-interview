@@ -205,3 +205,21 @@ Data:
 
 ## Async - Sync
 ~[](./assets/aysnc-sync.png)
+
+
+## Adding a new method to an object (ex. String)
+
+```js
+String.prototype.customFunc = function() {
+    return this + "!!!";
+}
+
+"Hello".customFunc()
+// Output: 'Hello!!!'
+
+"asdasdasdasd".customFunc()
+// Output: 'asdasdasdasd!!!'
+```
+
+> TODO: Learn more about `proto` and `prototype`
+
