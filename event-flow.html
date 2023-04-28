@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Bubbling</h2>
+    <div
+      id="bubblingBox1"
+      style="
+        position: relative;
+        width: 400px;
+        height: 400px;
+        background-color: rgb(255, 183, 183);
+      "
+    >
+      Box1
+      <div
+        id="bubblingBox2"
+        style="
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          width: 200px;
+          height: 200px;
+          background-color: rgb(164, 164, 251);
+        "
+      >
+        Box2
+        <button
+          id="bubblingButton1"
+          style="position: absolute; right: 0; bottom: 0"
+        >
+          Click Me!
+        </button>
+        <button
+          id="bubblingButton2"
+          style="position: absolute; left: 0; bottom: 0"
+        >
+          Without Propag
+        </button>
+      </div>
+    </div>
+
+    <h2>Capturing</h2>
+    <div
+      id="capturingBox1"
+      style="
+        position: relative;
+        width: 400px;
+        height: 400px;
+        background-color: rgb(255, 183, 183);
+      "
+    >
+      Box1
+      <div
+        id="capturingBox2"
+        style="
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          width: 200px;
+          height: 200px;
+          background-color: rgb(164, 164, 251);
+        "
+      >
+        Box2
+        <button
+          id="capturingButton1"
+          style="position: absolute; right: 0; bottom: 0"
+        >
+          Click Me!
+        </button>
+        <button
+          id="capturingButton2"
+          style="background: red; position: absolute; left: 0; bottom: 0"
+        >
+          Without Propag
+        </button>
+      </div>
+    </div>
+
+    <script>
+      const bubblingBox1 = document.getElementById("bubblingBox1");
+      const bubblingBox2 = document.getElementById("bubblingBox2");
+      const bubblingButton1 = document.getElementById("bubblingButton1");
+      const bubblingButton2 = document.getElementById("bubblingButton2");
+
+      bubblingBox1.addEventListener("click", (e) => {
+        alert("Box1");
+      });
+      bubblingBox2.addEventListener("click", (e) => {
+        alert("Box2");
+      });
+      bubblingButton1.addEventListener("click", (e) => {
+        alert("Button");
+      });
+      bubblingButton2.addEventListener("click", (e) => {
+        e.stopPropagation();
+        alert("Button");
+      });
+
+      const capturingBox1 = document.getElementById("capturingBox1");
+      const capturingBox2 = document.getElementById("capturingBox2");
+      const capturingButton1 = document.getElementById("capturingButton1");
+      const capturingButton2 = document.getElementById("capturingButton2");
+
+      capturingBox1.addEventListener(
+        "click",
+        (e) => {
+          alert("Box1");
+        },
+        true
+      );
+      capturingBox2.addEventListener(
+        "click",
+        (e) => {
+          alert("Box2");
+        },
+        true
+      );
+      capturingButton1.addEventListener(
+        "click",
+        (e) => {
+          alert("Button");
+        },
+        true
+      );
+      capturingButton2.addEventListener(
+        "click",
+        (e) => {
+          e.stopPropagation();
+          alert("Button");
+        },
+        true
+      );
+    </script>
+  </body>
+</html>

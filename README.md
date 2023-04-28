@@ -142,7 +142,7 @@ function process(item) {
 ## Polling vs Pushing
 ![](./assets/polling-pushing.jpg)
 
-## Event Flow
+## Event Flow (Bubbling / Capturing)
 ![](./assets/event-flow.jpg)
 
 ## Domain - Host - Port - IP
