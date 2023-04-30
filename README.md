@@ -227,3 +227,20 @@ String.prototype.customFunc = function() {
 ![](./assets/spreading-rest.jpg)
 
 [Rest/Spreading/Destructuring Demo](./rest-spreading.html)
+
+## Primitive Types vs Reference Types
+
+![](./assets/primitive-refTypes.png)
+
+**Primitive Types:**
+- string
+- number
+- bigint
+- boolean
+- undefined
+- symbol
+- null
+
+**Non-Primitive (Reference) Types:**
+- array
+- object
