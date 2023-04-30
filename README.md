@@ -237,9 +237,9 @@ String.prototype.customFunc = function() {
 - number
 - bigint
 - boolean
-- undefined
+- **undefined**
 - symbol
-- null
+- **null**
 
 **Non-Primitive (Reference) Types:**
 - array
